@@ -1,0 +1,49 @@
+term,finance_sentiment_score,direction,reason
+bearish,-0.45,negative,Directly negative market-view language.
+beat,0.45,positive,Earnings or sales beating expectations is usually favourable.
+beats,0.45,positive,Plural form of beat; commonly signals results above estimates.
+bullish,0.45,positive,Directly positive market-view language.
+buy,0.2,positive,Common positive analyst/action word; score kept low because it can be generic.
+buying,0.2,positive,Buying can be favourable; score kept low because context varies.
+buys,0.2,positive,Institutional or insider buying can be favourable; score kept low.
+decline,-0.25,negative,Describes deterioration or falling values.
+declined,-0.25,negative,Describes deterioration or falling values.
+declines,-0.25,negative,Describes deterioration or falling values.
+default,-0.5,negative,Credit default language is clearly adverse.
+defaults,-0.5,negative,Credit default language is clearly adverse.
+dividend,0.15,positive,Dividend language can indicate shareholder return; conservative score.
+dividends,0.15,positive,Dividend language can indicate shareholder return; conservative score.
+downgrade,-0.45,negative,Analyst downgrades are unfavourable recommendation changes.
+downgraded,-0.45,negative,Past-tense analyst downgrade signal.
+downgrades,-0.45,negative,Plural analyst downgrade signal.
+headwinds,-0.25,negative,Business headwinds describe adverse conditions.
+inflow,0.25,positive,ETF or fund inflows indicate demand.
+inflows,0.25,positive,ETF or fund inflows indicate demand.
+layoff,-0.35,negative,Layoffs suggest business stress or cost pressure.
+layoffs,-0.35,negative,Layoffs suggest business stress or cost pressure.
+outflow,-0.25,negative,ETF or fund outflows indicate weaker demand.
+outflows,-0.25,negative,ETF or fund outflows indicate weaker demand.
+outperform,0.35,positive,Positive analyst recommendation language.
+plunge,-0.45,negative,Describes a sharp negative move.
+plunges,-0.45,negative,Describes sharp negative moves.
+raised,0.3,positive,Often appears in price-target or guidance increases.
+raises,0.35,positive,Often appears in price-target or guidance increases.
+rallies,0.35,positive,Describes favourable price moves.
+rally,0.35,positive,Describes a favourable price move.
+rebound,0.25,positive,Describes recovery after weakness.
+rebounds,0.25,positive,Describes recovery after weakness.
+sell,-0.25,negative,Sell recommendation/action word; score kept moderate.
+selling,-0.25,negative,Selling can be unfavourable; score kept moderate.
+sells,-0.25,negative,Selling can be unfavourable; score kept moderate.
+slump,-0.35,negative,Describes a negative price or business move.
+slumps,-0.35,negative,Describes negative price or business moves.
+surge,0.35,positive,Describes a strong positive move.
+surges,0.35,positive,Describes strong positive moves.
+tailwinds,0.25,positive,Business tailwinds usually describe supportive conditions.
+underperform,-0.35,negative,Negative analyst recommendation language.
+underweight,-0.25,negative,Negative analyst allocation/recommendation language.
+upgrade,0.45,positive,Analyst upgrades are favourable recommendation changes.
+upgraded,0.45,positive,Past-tense analyst upgrade signal.
+writedown,-0.45,negative,Write-downs usually signal asset impairment.
+yield,0.15,positive,Income yield can be attractive; conservative because context varies.
+yields,0.15,positive,Income yield can be attractive; conservative because context varies.

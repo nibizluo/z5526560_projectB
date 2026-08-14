@@ -234,6 +234,15 @@ def data_span(df: pd.DataFrame, date_column: str = "date") -> str:
     return f"{dates.min().date()} to {dates.max().date()}"
 
 
+def compact_data_span(df: pd.DataFrame, date_column: str = "date") -> str:
+    if df is None or df.empty or date_column not in df.columns:
+        return "n/a"
+    dates = pd.to_datetime(df[date_column], errors="coerce").dropna()
+    if dates.empty:
+        return "n/a"
+    return f"{dates.min():%Y-%m} to {dates.max():%Y-%m}"
+
+
 def infer_periods_per_year(dates: pd.Series) -> int:
     parsed = pd.to_datetime(dates, errors="coerce").dropna()
     if parsed.empty:
@@ -470,6 +479,7 @@ with overview_tab:
     if performance is not None and not performance.empty:
         best_sharpe = performance.loc[performance["sharpe_ratio"].idxmax()]
         lowest_drawdown = performance.loc[performance["max_drawdown"].idxmax()]
+        full_performance_span = data_span(fund_returns)
         metric_strip(
             [
                 ("Funds compared", str(performance["fund_name"].nunique()), None),
@@ -483,9 +493,14 @@ with overview_tab:
                     format_percent(lowest_drawdown["max_drawdown"]),
                     lowest_drawdown["fund_name"],
                 ),
-                ("Performance sample", data_span(fund_returns), None),
+                (
+                    "Performance sample",
+                    compact_data_span(fund_returns),
+                    full_performance_span,
+                ),
             ]
         )
+        st.caption(f"Full performance sample: {full_performance_span}.")
 
     col1, col2 = st.columns(2)
     with col1:

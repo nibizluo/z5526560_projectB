@@ -611,17 +611,17 @@ with fact_sheet_tab:
                 cost_col1.metric(
                     "Net cumulative return",
                     format_percent(cost_row["net_cumulative_return"]),
-                    "After the assumed 0.10% cost per dollar traded.",
+                    help="After the assumed 0.10% cost per dollar traded.",
                 )
                 cost_col2.metric(
                     "Estimated cost drag",
                     format_percent(cost_row["estimated_cost_drag"]),
-                    "Gross cumulative return minus net cumulative return.",
+                    help="Gross cumulative return minus net cumulative return.",
                 )
                 cost_col3.metric(
                     "Average turnover",
                     format_percent(cost_row["average_turnover"]),
-                    "Average one-way turnover at rebalance dates.",
+                    help="Average one-way turnover at rebalance dates.",
                 )
 
         if fund_returns is not None and not fund_returns.empty:
